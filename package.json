@@ -38,6 +38,8 @@
   },
   "dependencies": {
     "@types/whatwg-fetch": "0.0.33",
+    "ts-loader": "^2.3.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "whatwg-fetch": "^2.0.3"
   }
 }

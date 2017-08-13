@@ -17,7 +17,7 @@ gulp.task("clean", function(cb) {
 	del(["game/script"], cb);
 });
 
-gulp.task("compile", ["clean"], shell.task("tsc -p ./"));
+gulp.task("compile", ["clean"], shell.task("webpack"));
 
 gulp.task("deploy", shell.task("npm install", {cwd: "game"}));
 
