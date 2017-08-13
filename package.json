@@ -6,6 +6,7 @@
   "scripts": {
     "prepublish": "npm run install:typings",
     "build": "gulp build && cd game && akashic scan asset script",
+    "production-build": "NODE_ENV=production gulp build && cd game && akashic scan asset script && akashic export html --output ../www --force",
     "install:typings": "typings install",
     "lint": "gulp lint",
     "start": "akashic-sandbox game",
