@@ -3,7 +3,7 @@ var YakitoriAPI = (function () {
     function YakitoriAPI() {
     }
     YakitoriAPI.post = function (data) {
-        return fetch('http://localhost:3001/api/yakitori', {
+        return fetch('/api/yakitori', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
