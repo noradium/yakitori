@@ -37,11 +37,7 @@
     "@akashic/akashic-sandbox": "^0.12.4"
   },
   "dependencies": {
-    "@types/request": "^2.0.0",
     "@types/whatwg-fetch": "0.0.33",
-    "request": "^2.81.0",
-    "ts-loader": "^2.3.2",
-    "webpack": "^3.5.4",
     "whatwg-fetch": "^2.0.3"
   }
 }
