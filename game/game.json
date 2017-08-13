@@ -1,0 +1,115 @@
+{
+	"width": 960,
+	"height": 540,
+	"fps": 30,
+	"main": "./script/main.js",
+	"assets": {
+		"convayor": {
+			"type": "image",
+			"width": 960,
+			"height": 162,
+			"path": "image/convayor.png"
+		},
+		"momo_nama": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/momo_nama.png"
+		},
+		"momo_good": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/momo_good.png"
+		},
+		"momo_koge": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/momo_koge.png"
+		},
+		"kusioki": {
+			"type": "image",
+			"width": 300,
+			"height": 180,
+			"path": "image/kusioki.png"
+		},
+		"kusi": {
+			"type": "image",
+			"width": 20,
+			"height": 350,
+			"path": "image/kusi.png"
+		},
+		"grill": {
+			"type": "image",
+			"width": 420,
+			"height": 320,
+			"path": "image/grill.png"
+		},
+		"sara": {
+			"type": "image",
+			"width": 220,
+			"height": 380,
+			"path": "image/sara.png"
+		},
+		"main": {
+			"type": "script",
+			"path": "script/main.js",
+			"global": true
+		},
+		"YakitoriAPI": {
+			"type": "script",
+			"path": "script/api/YakitoriAPI.js",
+			"global": true
+		},
+		"FoodConveyor": {
+			"type": "script",
+			"path": "script/object/FoodConveyor.js",
+			"global": true
+		},
+		"Grill": {
+			"type": "script",
+			"path": "script/object/Grill.js",
+			"global": true
+		},
+		"Kusi": {
+			"type": "script",
+			"path": "script/object/Kusi.js",
+			"global": true
+		},
+		"Kusioki": {
+			"type": "script",
+			"path": "script/object/Kusioki.js",
+			"global": true
+		},
+		"Result": {
+			"type": "script",
+			"path": "script/object/Result.js",
+			"global": true
+		},
+		"Sara": {
+			"type": "script",
+			"path": "script/object/Sara.js",
+			"global": true
+		},
+		"FoodBase": {
+			"type": "script",
+			"path": "script/object/food/FoodBase.js",
+			"global": true
+		},
+		"Momo": {
+			"type": "script",
+			"path": "script/object/food/Momo.js",
+			"global": true
+		},
+		"game": {
+			"type": "script",
+			"path": "script/scene/game.js",
+			"global": true
+		}
+	},
+	"globalScripts": [
+		"node_modules/whatwg-fetch/fetch.js",
+		"node_modules/whatwg-fetch/package.json"
+	]
+}
