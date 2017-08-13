@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ES6",
     "noLib": false,
     "noImplicitAny": true,
     "module": "commonjs" ,
@@ -8,6 +8,7 @@
   },
   "files": [
     "node_modules/@akashic/akashic-engine/lib/main.d.ts",
+    "typings/globals/node/index.d.ts",
     "src/main.ts"
   ]
 }

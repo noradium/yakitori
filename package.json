@@ -38,8 +38,12 @@
   },
   "dependencies": {
     "@types/whatwg-fetch": "0.0.33",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
     "ts-loader": "^2.3.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.4",
     "whatwg-fetch": "^2.0.3"
   }
 }

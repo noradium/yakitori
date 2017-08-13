@@ -1,7 +1,7 @@
 export default class YakitoriAPI {
   static get BASE_URL() {
     if (process.env['NODE_ENV'] === 'production') {
-      return 'http://hanamori.noradium.com';
+      return 'http://hanayumi.noradium.com';
     }
     return 'http://localhost:3001';
   }
@@ -13,6 +13,6 @@ export default class YakitoriAPI {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data)
-    }).then((response: Response) => response.json());
+    }).then<{name: string}>((response: Response) => response.json());
   }
 }

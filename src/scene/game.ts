@@ -54,9 +54,9 @@ export default class GameScene extends g.Scene {
             kusi.startGrill();
           } else if (sara.isContainedKusi(kusi)) {
             YakitoriAPI.post(this.createPostData(kusi))
-              .then((response: {name: string}) => {
+              .then((json: {name: string}) => {
                 this.remove(kusi);
-                result.showResult(response.name, kusi);
+                result.showResult(json.name, kusi);
               });
           }
         });
