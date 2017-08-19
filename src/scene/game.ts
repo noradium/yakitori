@@ -13,6 +13,24 @@ export default class GameScene extends g.Scene {
     'momo_nama',
     'momo_good',
     'momo_koge',
+    'liver_nama',
+    'liver_good',
+    'liver_koge',
+    'heart_nama',
+    'heart_good',
+    'heart_koge',
+    'nankotsu_nama',
+    'nankotsu_good',
+    'nankotsu_koge',
+    'negi_nama',
+    'negi_good',
+    'negi_koge',
+    'sasami_nama',
+    'sasami_good',
+    'sasami_koge',
+    'tsukune_nama',
+    'tsukune_good',
+    'tsukune_koge',
     'kusioki',
     'kusi',
     'grill',
@@ -41,6 +59,9 @@ export default class GameScene extends g.Scene {
           if (Math.abs(event.prevDelta.x) < 10 && event.prevDelta.y < -10) {
             const foodPointSource = foodConveyor.findFood({x: kusi.x, y: kusi.y});
             if (!foodPointSource) {
+              return;
+            }
+            if (!kusi.canAppendFood()) {
               return;
             }
             const food = foodPointSource.target as FoodBase;

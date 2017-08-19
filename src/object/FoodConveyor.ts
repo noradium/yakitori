@@ -1,5 +1,21 @@
 import Momo from './food/Momo';
+import Liver from './food/Liver';
+import Heart from './food/Heart';
 import FoodBase from './food/FoodBase';
+import Nankotsu from './food/Nankotsu';
+import Negi from './food/Negi';
+import Sasami from './food/Sasami';
+import Tsukune from './food/Tsukune';
+
+const FOOD_DISTRIBUTION = [
+  { rate: 5, Constructor: Momo },
+  { rate: 4, Constructor: Negi },
+  { rate: 4, Constructor: Sasami },
+  { rate: 4, Constructor: Tsukune },
+  { rate: 3, Constructor: Nankotsu },
+  { rate: 3, Constructor: Liver },
+  { rate: 3, Constructor: Heart }
+];
 
 export default class FoodConveyor {
   private conveyor: g.E;
@@ -60,15 +76,29 @@ export default class FoodConveyor {
   };
 
   private setFoodGenerateTimer(scene: g.Scene) {
-    const interval = g.game.random[0].get(3000, 5000);
+    const interval = g.game.random[0].get(3500, 5000);
 
     scene.setTimeout(interval, () => {
-      const food = new Momo({scene});
+      const food = this.generateRandomFood(scene);
       const conveyorBoundingRect = this.conveyor.calculateBoundingRect();
       food.x = g.game.width;
       food.y = g.game.random[0].get(conveyorBoundingRect.top, conveyorBoundingRect.bottom - food.boundingHeight);
       this.foodContainer.append(food);
       this.setFoodGenerateTimer(scene);
     });
+  }
+
+  private generateRandomFood(scene: g.Scene) {
+    const max = FOOD_DISTRIBUTION.reduce((p, c) => p + c.rate, 0);
+    const randomNum = g.game.random[0].get(0, max - 1);
+    let counter = 0;
+    for (let i = 0; i < FOOD_DISTRIBUTION.length; ++i) {
+      counter += FOOD_DISTRIBUTION[i].rate;
+      if (randomNum < counter) {
+        return new FOOD_DISTRIBUTION[i].Constructor({scene});
+      }
+    }
+    // ここにはこないはずだけど一応
+    return new Momo({scene});
   }
 }

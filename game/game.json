@@ -56,6 +56,114 @@
 			"type": "script",
 			"path": "script/main.js",
 			"global": true
+		},
+		"heart_good": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/heart_good.png"
+		},
+		"heart_koge": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/heart_koge.png"
+		},
+		"heart_nama": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/heart_nama.png"
+		},
+		"liver_good": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/liver_good.png"
+		},
+		"liver_koge": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/liver_koge.png"
+		},
+		"liver_nama": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/liver_nama.png"
+		},
+		"nankotsu_good": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/nankotsu_good.png"
+		},
+		"nankotsu_koge": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/nankotsu_koge.png"
+		},
+		"nankotsu_nama": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/nankotsu_nama.png"
+		},
+		"negi_good": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/negi_good.png"
+		},
+		"negi_koge": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/negi_koge.png"
+		},
+		"negi_nama": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/negi_nama.png"
+		},
+		"sasami_good": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/sasami_good.png"
+		},
+		"sasami_koge": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/sasami_koge.png"
+		},
+		"sasami_nama": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/sasami_nama.png"
+		},
+		"tsukune_good": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/tsukune_good.png"
+		},
+		"tsukune_koge": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/tsukune_koge.png"
+		},
+		"tsukune_nama": {
+			"type": "image",
+			"width": 130,
+			"height": 90,
+			"path": "image/tsukune_nama.png"
 		}
 	},
 	"globalScripts": [

@@ -51,6 +51,10 @@ export default class Kusi extends g.E {
     return this.foods.children as FoodBase[];
   }
 
+  canAppendFood() {
+    return !this.foods.children || this.foods.children.length < 5;
+  }
+
   private onKusiPointMove = (event: g.PointMoveEvent) => {
     this.x += event.prevDelta.x;
     this.y += event.prevDelta.y;
