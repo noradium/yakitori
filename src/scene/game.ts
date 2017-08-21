@@ -47,7 +47,6 @@ export default class GameScene extends g.Scene {
       const kusioki = new Kusioki(this);
       const grill = new Grill(this);
       const sara = new Sara(this);
-      const result = new Result(this);
 
       kusioki.pointDown.handle((event: g.PointDownEvent) => {
         const kusi = new Kusi({
@@ -75,12 +74,11 @@ export default class GameScene extends g.Scene {
           if (grill.isContainedKusi(kusi)) {
             kusi.startGrill();
           } else if (sara.isContainedKusi(kusi)) {
-            result.showResult('長い名前あ長い名前あ長い名前あ長い名前', kusi);
-            // YakitoriAPI.post(this.createPostData(kusi))
-            //   .then((json: {name: string}) => {
-            //     this.remove(kusi);
-            //     result.showResult(json.name, kusi);
-            //   });
+            YakitoriAPI.post(this.createPostData(kusi))
+              .then((json: {name: string}) => {
+                this.remove(kusi);
+                (new Result(this)).showResult(json.name, kusi);
+              });
           }
         });
         kusi.body.pointDown.handle((event: g.PointDownEvent) => {
