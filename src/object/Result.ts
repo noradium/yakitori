@@ -89,7 +89,7 @@ export default class Result extends g.E {
     }
     this.nameLabel.text = name;
     this.nameLabel.invalidate();
-    this.background.width = this.nameLabel.width + 60;
+    this.background.width = Math.max(this.nameLabel.width + 60, 500);
     this.closeButton.x = this.background.width - this.closeButton.width - 10;
     this.dekimasitaLabel.x = this.background.width - this.dekimasitaLabel.width - 10;
     this.twitterButton.x = this.background.width - 85;
@@ -97,6 +97,7 @@ export default class Result extends g.E {
     this.kusi.angle = 270;
     this.kusi.x = this.x + 5;
     this.kusi.y = 140;
+    this.kusi.body.touchable = false;
     this.kusi.modified();
     this.append(this.kusi);
     this.show();
