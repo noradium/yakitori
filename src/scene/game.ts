@@ -34,7 +34,8 @@ export default class GameScene extends g.Scene {
     'kusioki',
     'kusi',
     'grill',
-    'sara'
+    'sara',
+    'twitter'
   ];
 
   private kusiList: Kusi[] = [];
@@ -74,11 +75,12 @@ export default class GameScene extends g.Scene {
           if (grill.isContainedKusi(kusi)) {
             kusi.startGrill();
           } else if (sara.isContainedKusi(kusi)) {
-            YakitoriAPI.post(this.createPostData(kusi))
-              .then((json: {name: string}) => {
-                this.remove(kusi);
-                result.showResult(json.name, kusi);
-              });
+            result.showResult('長い名前あ長い名前あ長い名前あ長い名前', kusi);
+            // YakitoriAPI.post(this.createPostData(kusi))
+            //   .then((json: {name: string}) => {
+            //     this.remove(kusi);
+            //     result.showResult(json.name, kusi);
+            //   });
           }
         });
         kusi.body.pointDown.handle((event: g.PointDownEvent) => {

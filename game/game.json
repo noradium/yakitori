@@ -164,6 +164,12 @@
 			"width": 130,
 			"height": 90,
 			"path": "image/tsukune_nama.png"
+		},
+		"twitter": {
+			"type": "image",
+			"width": 50,
+			"height": 50,
+			"path": "image/twitter.png"
 		}
 	},
 	"globalScripts": [
