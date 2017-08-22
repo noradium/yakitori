@@ -94,7 +94,7 @@ export default class GameScene extends g.Scene {
     return {
       foods: kusi.getFoods().map((food: FoodBase) => {
         return {
-          name: food.getFoodName(),
+          name: food.foodName,
           condition: food.getCurrentCondition()
         };
       })

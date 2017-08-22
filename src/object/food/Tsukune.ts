@@ -10,8 +10,14 @@ export default class Tsukune extends FoodBase {
   protected get assetNameKoge() {
     return 'tsukune_koge';
   }
+  protected get goodGrillSec() {
+    return 7;
+  }
+  protected get kogeGrillSec() {
+    return 10;
+  }
 
-  getFoodName() {
+  get foodName() {
     return 'tsukune';
   }
 }

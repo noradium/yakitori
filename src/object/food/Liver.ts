@@ -10,8 +10,14 @@ export default class Liver extends FoodBase {
   protected get assetNameKoge() {
     return 'liver_koge';
   }
+  protected get goodGrillSec() {
+    return 5;
+  }
+  protected get kogeGrillSec() {
+    return 7;
+  }
 
-  getFoodName() {
+  get foodName() {
     return 'liver';
   }
 }

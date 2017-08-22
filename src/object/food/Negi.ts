@@ -10,8 +10,14 @@ export default class Negi extends FoodBase {
   protected get assetNameKoge() {
     return 'negi_koge';
   }
+  protected get goodGrillSec() {
+    return 7;
+  }
+  protected get kogeGrillSec() {
+    return 10;
+  }
 
-  getFoodName() {
+  get foodName() {
     return 'negi';
   }
 }

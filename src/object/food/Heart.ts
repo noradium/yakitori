@@ -10,8 +10,14 @@ export default class Heart extends FoodBase {
   protected get assetNameKoge() {
     return 'heart_koge';
   }
+  protected get goodGrillSec() {
+    return 6;
+  }
+  protected get kogeGrillSec() {
+    return 8;
+  }
 
-  getFoodName() {
+  get foodName() {
     return 'heart';
   }
 }

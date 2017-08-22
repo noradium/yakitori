@@ -2,6 +2,8 @@ abstract class FoodBase extends g.E {
   protected abstract get assetNameNama(): string;
   protected abstract get assetNameGood(): string;
   protected abstract get assetNameKoge(): string;
+  protected abstract get goodGrillSec(): number;
+  protected abstract get kogeGrillSec(): number;
 
   protected sprites: {[key: string]: g.Sprite};
 
@@ -11,7 +13,7 @@ abstract class FoodBase extends g.E {
   private isGrilling: boolean;
   private currentCondition: string;
 
-  public abstract getFoodName(): string;
+  public abstract get foodName(): string;
 
   constructor(params: g.EParameterObject) {
     super({...params, touchable: true});
@@ -61,9 +63,9 @@ abstract class FoodBase extends g.E {
     }
     this.grilledTimeSec += 1 / g.game.fps;
 
-    if (this.currentCondition === 'nama' && this.grilledTimeSec > 5) {
+    if (this.currentCondition === 'nama' && this.grilledTimeSec > this.goodGrillSec) {
       this.setCurrentSprite('good');
-    } else if (this.currentCondition === 'good' && this.grilledTimeSec > 8) {
+    } else if (this.currentCondition === 'good' && this.grilledTimeSec > this.kogeGrillSec) {
       this.setCurrentSprite('koge');
     }
   };

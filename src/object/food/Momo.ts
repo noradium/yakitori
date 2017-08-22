@@ -10,8 +10,14 @@ export default class Momo extends FoodBase {
   protected get assetNameKoge() {
     return 'momo_koge';
   }
+  protected get goodGrillSec() {
+    return 7;
+  }
+  protected get kogeGrillSec() {
+    return 10;
+  }
 
-  getFoodName() {
+  get foodName() {
     return 'momo';
   }
 }
