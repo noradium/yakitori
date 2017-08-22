@@ -15,7 +15,7 @@ export default class Grill extends g.Sprite {
   isContainedKusi(kusi: Kusi) {
     return kusi.x > this.x &&
       kusi.x < this.x + this.width &&
-      kusi.y > this.y - 10 &&
-      kusi.y < this.y + 20;
+      kusi.y > this.y - 100 &&
+      kusi.y < this.y + 100;
   }
 }

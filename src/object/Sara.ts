@@ -15,7 +15,7 @@ export default class Sara extends g.Sprite {
   isContainedKusi(kusi: Kusi) {
     return kusi.x > this.x &&
       kusi.x < this.x + this.width &&
-      kusi.y > this.y - 30 &&
-      kusi.y < this.y + 50;
+      kusi.y > this.y - 100 &&
+      kusi.y < this.y + 100;
   }
 }
