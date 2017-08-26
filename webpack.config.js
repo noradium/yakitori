@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  entry: './src/main.ts',
+  entry: ['es6-promise', 'whatwg-fetch', './src/main.ts'],
   output: {
     filename: './game/script/main.js',
     libraryTarget: 'commonjs2'
